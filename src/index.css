@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+
+}
+
+body {
+ font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+  width: 100%; /* Ensure body doesn't exceed viewport width */
+  position: relative; /* Required for overflow to work properly */}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
